@@ -2,9 +2,9 @@
 
 #echo "Test"
 
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/app-root/src/
+LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH:/opt/app-root/src/
 export LD_LIBRARY_PATH
 
-python3 app.py
+LD_LIBRARY_PATH=./ python3 app.py
 
-#exit 0
+exit 0
