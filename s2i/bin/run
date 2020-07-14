@@ -40,9 +40,9 @@ function get_default_web_concurrency() {
 
 function maybe_run_in_init_wrapper() {
   if [[ -z "$ENABLE_INIT_WRAPPER" ]]; then
-    exec "$@"
+    exec LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH "$@"
   else
-    exec $STI_SCRIPTS_PATH/init-wrapper "$@"
+    exec $STI_SCRIPTS_PATH/init-wrapper LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH "$@"
   fi
 }
 
