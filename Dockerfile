@@ -1,10 +1,10 @@
 #FROM nvidia/cuda:10.0-base-ubuntu16.04
-#FROM centos:7
+FROM centos:7
 #FROM centos/python-36-centos7
 #USER root
 #MAINTAINER  jeon
 
-FROM python:3.6
+#FROM python:3.6
 
 #RUN mkdir /src
 #WORKDIR /src
