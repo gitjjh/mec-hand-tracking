@@ -97,7 +97,7 @@ EXPOSE 5000
 #CMD ["python3", "app.py"]
 
 #RUN 
-RUN sed -i 's/exec sudo -E -H -u $NB_USER/exec sudo -E -H -u $NB_USER LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH/' ./start.sh
+RUN sed -i 's/exec sudo -E -H -u $NB_USER/exec sudo -E -H -u $NB_USER LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH/' ./export.sh
 
 #ENTRYPOINT ["/bin/bash", "$LD_LIBRARY_PATH", python3", "app.py"]
 #ENTRYPOINT ["./export.sh"]
