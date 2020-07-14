@@ -75,7 +75,7 @@ RUN export LD_LIBRARY_PATH PATH
 # echo "TEST----2"
 
 #RUN unlink /usr/lib64/libm.so.6
-#RUN cp /opt/app-root/src/libm.so.6 /usr/lib64/
+RUN cp /opt/app-root/src/libm.so.6 lib64/
 EXPOSE 5000
 
 #CMD []
