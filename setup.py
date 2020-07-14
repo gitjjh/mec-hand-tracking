@@ -4,7 +4,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 
-REQUIRED_PACKAGES = ['Pillow>=1.0', 'Flask', 'tensorflow', 'six', 'matplotlib']
+REQUIRED_PACKAGES = ['Pillow>=1.0', 'Flask', 'six', 'matplotlib']
 
 setup(
     name='webrtc_object_detection',
@@ -46,12 +46,3 @@ setup(
 #          "Try running `git clone https://github.com/tensorflow/models.git`.\n"
  #         "Then `cp /research/object_detection to /object_detection` instead")
 
-
-'''Compile Protobufs'''
-import subprocess
-print("Compiling protobufs")
-try:
-    subprocess.Popen('protoc object_detection/protos/*.proto --python_out=.', shell=True)
-
-except:
-    print("Error compiling Protobufs")
