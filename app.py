@@ -27,7 +27,7 @@ def after_request(response):
 
 @app.route('/')
 def index():
-    # return Response('ETRI Object Detection Test 2019.09.27 #8')
+    return Response('ETRI Hand Tracking Test 2020.07.15 #1')
     return render_template('index.html')
 
 
