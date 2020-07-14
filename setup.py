@@ -1,4 +1,4 @@
-'''Setup script for object_detection with webrtc'''
+'''Setup script for hand_tracking with webrtc'''
 
 from setuptools import find_packages
 from setuptools import setup
@@ -7,12 +7,12 @@ from setuptools import setup
 REQUIRED_PACKAGES = ['Pillow>=1.0', 'Flask', 'six', 'matplotlib']
 
 setup(
-    name='webrtc_object_detection',
+    name='webrtc_hand_tracking',
     version='0.1',
     install_requires=REQUIRED_PACKAGES,
     include_package_data=True,
     packages=[p for p in find_packages()],
-    description='Tensorflow Object Detection with WebRTC',
+    description='Tensorflow Hand Tracking with WebRTC',
 )
 
 #'''Download the Object Dectection directory'''
