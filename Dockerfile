@@ -85,8 +85,10 @@ EXPOSE 5000
 #RUN export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./ 
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
 #CMD ["LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/root-app/src python3", "app.py"]
-#CMD ["python3", "app.py"]
+ENTRYPOINT ["./export.sh"]
+
+CMD ["python3", "app.py"]
 
 #ENTRYPOINT ["/bin/bash", "$LD_LIBRARY_PATH", python3", "app.py"]
 #ENTRYPOINT ["./export.sh"]
-CMD ["export.sh"]
+#CMD ["export.sh"]
