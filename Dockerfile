@@ -17,8 +17,8 @@ FROM centos:7
 #COPY . /src
 #RUN pip install .
 
-ENV LD_LIBRARY_PATH ./:$LD_LIBRARY_PATH
-RUN export LD_LIBRARY_PATH PATH
+#ENV LD_LIBRARY_PATH ./:$LD_LIBRARY_PATH
+#RUN export LD_LIBRARY_PATH PATH
 
 #RUN LD_LIBRARY_PATH="/opt/root-app/src:$LD_LIBRARY_PATH"
 #RUN export LD_LIBRARY_PATH PATH
@@ -75,7 +75,7 @@ RUN export LD_LIBRARY_PATH PATH
 # echo "TEST----2"
 
 #RUN unlink /usr/lib64/libm.so.6
-RUN cp /opt/app-root/src/libm.so.6 lib64/
+RUN cp /opt/app-root/src/libm.so.6 /lib64/
 EXPOSE 5000
 
 #CMD []
