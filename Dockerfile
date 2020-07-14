@@ -75,7 +75,7 @@ FROM centos:7
 # echo "TEST----2"
 
 #RUN unlink /usr/lib64/libm.so.6
-COPY /opt/app-root/src/libm.so.6 /lib64/
+#COPY /opt/app-root/src/libm.so.6 /lib64/
 
 
 #CMD []
@@ -94,9 +94,10 @@ ENV LD_LIBRARY_PATH ./:$LD_LIBRARY_PATH
 
 EXPOSE 5000
 
-CMD ["python3", "app.py"]
+#CMD ["python3", "app.py"]
 
-
+#RUN 
+RUN sed -i 's/exec sudo -E -H -u $NB_USER/exec sudo -E -H -u $NB_USER LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH/' ./start.sh
 
 #ENTRYPOINT ["/bin/bash", "$LD_LIBRARY_PATH", python3", "app.py"]
 #ENTRYPOINT ["./export.sh"]
